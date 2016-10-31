@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:7746/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="application/shiny-singletons">7a4807794bbb8c6058133e4d24e8f36b9b64cef5</script>  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[0.13.2];font-awesome[4.5.0];plotlyjs[1.10.1];htmlwidgets[0.7];plotly-binding[3.6.0];datatables-binding[0.2];bootstrap[3.3.5];AdminLTE[2.0.6];shinydashboard[0.5.1.9000]</script><script src="./index_files/json2-min.js"></script>
+<script src="./index_files/jquery.min.js"></script>
+<link href="./index_files/shiny.css" rel="stylesheet">
+<script src="./index_files/shiny.min.js"></script>
+<link href="./index_files/font-awesome.min.css" rel="stylesheet">
+<link href="./index_files/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="./index_files/plotly-latest.min.js"></script><style></style>
+<script src="./index_files/htmlwidgets.js"></script>
+<script src="./index_files/plotly.js"></script>
+<script src="./index_files/datatables.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./index_files/bootstrap.min.css" rel="stylesheet">
+<script src="./index_files/bootstrap.min.js"></script>
+<script src="./index_files/html5shiv.min.js"></script>
+<script src="./index_files/respond.min.js"></script>
+<link href="./index_files/AdminLTE.min.css" rel="stylesheet">
+<link href="./index_files/_all-skins.min.css" rel="stylesheet">
+<script src="./index_files/app.min.js"></script>
+<link href="./index_files/shinydashboard.css" rel="stylesheet">
+<script src="./index_files/shinydashboard.js"></script>  <title></title>
+  <style type="text/css">
+         #loadmessage { position : absolute;
+  border: 16px solid #f3f3f3;
+                 border-radius: 50%;
+                 border-top: 16px solid blue;
+                 border-right: 16px solid green;
+                 border-bottom: 16px solid red;
+                 border-left: 16px solid pink;
+                 width: 120px;
+                 height: 120px;
+                 -webkit-animation: spin 2s linear infinite;
+                 animation: spin 2s linear infinite;
+                 }
+                 
+                 @-webkit-keyframes spin {
+                 0% { -webkit-transform: rotate(0deg); }
+                 100% { -webkit-transform: rotate(360deg); }
+                 }
+                 
+                 @keyframes spin {
+                 0% { transform: rotate(0deg); }
+                 100% { transform: rotate(360deg); }
+                 }
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+
+
+
+                 </style>
+  <link rel="stylesheet" type="text/css" href="./index_files/selectize.bootstrap3.css"><script src="./index_files/selectize.min.js"></script><link rel="stylesheet" type="text/css" href="./index_files/ion.rangeSlider.css"><link rel="stylesheet" type="text/css" href="./index_files/ion.rangeSlider.skinShiny.css"><script src="./index_files/ion.rangeSlider.min.js"></script><script src="./index_files/strftime-min.js"></script></head><body class="skin-blue" style="min-height: 611px;"><div></div>
+  <link rel="stylesheet" type="text/css" href="./index_files/style.css">
+  <script>
+        $(document).ready(function(){
+        // Bind classes to menu items, easiet to fill in manually
+        var ids = ['s1','s2','s3','s4','v1','v2','v3','one,'two'];
+        for(i=0; i<ids.length; i++){
+        $('a[data-value='+ids[i]+']').addClass('my_subitem_class');
+        }
+        
+        // Register click handeler
+        $('.my_subitem_class').on('click',function(){
+        // Unactive menuSubItems
+        $('.my_subitem_class').parent().removeClass('active');
+        })
+        })
+        </script>
+  <style>.shinyjs-hide { display: none !important; }</style>
+  <script>Shiny.addCustomMessageHandler('shinyjs-show', function(params) { shinyjs.debugMessage('shinyjs: calling function "show" with parameters:'); shinyjs.debugMessage(params); shinyjs.show(params);});
+Shiny.addCustomMessageHandler('shinyjs-hide', function(params) { shinyjs.debugMessage('shinyjs: calling function "hide" with parameters:'); shinyjs.debugMessage(params); shinyjs.hide(params);});
+Shiny.addCustomMessageHandler('shinyjs-toggle', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggle" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggle(params);});
+Shiny.addCustomMessageHandler('shinyjs-enable', function(params) { shinyjs.debugMessage('shinyjs: calling function "enable" with parameters:'); shinyjs.debugMessage(params); shinyjs.enable(params);});
+Shiny.addCustomMessageHandler('shinyjs-disable', function(params) { shinyjs.debugMessage('shinyjs: calling function "disable" with parameters:'); shinyjs.debugMessage(params); shinyjs.disable(params);});
+Shiny.addCustomMessageHandler('shinyjs-toggleState', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggleState" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggleState(params);});
+Shiny.addCustomMessageHandler('shinyjs-addClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "addClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.addClass(params);});
+Shiny.addCustomMessageHandler('shinyjs-removeClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "removeClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.removeClass(params);});
+Shiny.addCustomMessageHandler('shinyjs-toggleClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggleClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggleClass(params);});
+Shiny.addCustomMessageHandler('shinyjs-html', function(params) { shinyjs.debugMessage('shinyjs: calling function "html" with parameters:'); shinyjs.debugMessage(params); shinyjs.html(params);});
+Shiny.addCustomMessageHandler('shinyjs-onevent', function(params) { shinyjs.debugMessage('shinyjs: calling function "onevent" with parameters:'); shinyjs.debugMessage(params); shinyjs.onevent(params);});
+Shiny.addCustomMessageHandler('shinyjs-info', function(params) { shinyjs.debugMessage('shinyjs: calling function "info" with parameters:'); shinyjs.debugMessage(params); shinyjs.info(params);});
+Shiny.addCustomMessageHandler('shinyjs-logjs', function(params) { shinyjs.debugMessage('shinyjs: calling function "logjs" with parameters:'); shinyjs.debugMessage(params); shinyjs.logjs(params);});
+Shiny.addCustomMessageHandler('shinyjs-runjs', function(params) { shinyjs.debugMessage('shinyjs: calling function "runjs" with parameters:'); shinyjs.debugMessage(params); shinyjs.runjs(params);});
+Shiny.addCustomMessageHandler('shinyjs-reset', function(params) { shinyjs.debugMessage('shinyjs: calling function "reset" with parameters:'); shinyjs.debugMessage(params); shinyjs.reset(params);});
+Shiny.addCustomMessageHandler('shinyjs-delay', function(params) { shinyjs.debugMessage('shinyjs: calling function "delay" with parameters:'); shinyjs.debugMessage(params); shinyjs.delay(params);});</script>
+  <script src="./index_files/shinyjs-default-funcs.js"></script>
+  <script>shinyjs.debug = false;</script>
+  <title>Freshdesk - Customer Demographics and Revenue stats</title>
+  <title>Benchmark Freshdesk customers</title>
+  <title>Product - Feature Usage/Config stats</title>
+
+
+
+
+  <div class="wrapper">
+    <header class="main-header">
+      <span class="logo">
+        <a href="http://freshdesk.com/">
+          <img src="./index_files/logo.svg">
+        </a>
+      </span>
+      <nav class="navbar navbar-static-top" role="navigation">
+        <span style="display:none;">
+          <i class="fa fa-bars"></i>
+        </span>
+        <a href="http://127.0.0.1:7746/#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav"></ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <ul id="tabs" class="sidebar-menu shiny-bound-input">
+          <ul id="menu" class="shinydashboard-menu-output shiny-bound-output sidebar-menu">
+  <li class="treeview">
+    <a href="http://127.0.0.1:7746/#shiny-tab-s1" data-toggle="tab" data-value="s1">
+      <i class="fa fa-angle-double-right"></i>
+      <span>Customer Demographics</span>
+      <i class="fa fa-angle-left pull-right"></i>
+    </a>
+    <ul class="treeview-menu">
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-s1" data-toggle="tab" data-value="s1" data-start-selected="1">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="select">Filter by</label>
+            <div>
+              <select id="select" class="form-control selectized shiny-bound-input shinyjs-resettable" tabindex="-1" data-shinyjs-resettable-id="select" data-shinyjs-resettable-type="Select" data-shinyjs-resettable-value="Everything" style="display: none;"><option value="Everything" selected="selected">Everything</option></select><div class="selectize-control form-control single"><div class="selectize-input items full has-options has-items"><div data-value="Everything" class="item">Everything</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single form-control" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="select">{}</script>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#">
+          <div id="selectUI" class="shiny-html-output shiny-bound-output"></div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="Groupby">Group by</label>
+            <div>
+              <select id="Groupby" class="form-control selectized shiny-bound-input shinyjs-resettable" tabindex="-1" data-shinyjs-resettable-id="Groupby" data-shinyjs-resettable-type="Select" data-shinyjs-resettable-value="Region" style="display: none;"><option value="Region" selected="selected">Region</option></select><div class="selectize-control form-control single"><div class="selectize-input items full has-options has-items"><div data-value="Region" class="item">Region</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single form-control" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="Groupby">{}</script>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="barno">Number of bars</label>
+            <span class="irs js-irs-2 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min">3</span><span class="irs-max">12</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single">0</span></span><span class="irs-grid"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%">3</span><span class="irs-grid-pol small" style="left: 7.407407407%"></span><span class="irs-grid-pol small" style="left: 3.703703704%"></span><span class="irs-grid-pol" style="left: 11.111111111%"></span><span class="irs-grid-text js-grid-text-1" style="left: 11.1111%; visibility: hidden;">4</span><span class="irs-grid-pol small" style="left: 18.518518518%"></span><span class="irs-grid-pol small" style="left: 14.814814815%"></span><span class="irs-grid-pol" style="left: 22.222222222%"></span><span class="irs-grid-text js-grid-text-2" style="left: 22.2222%; visibility: hidden;">5</span><span class="irs-grid-pol small" style="left: 29.629629629%"></span><span class="irs-grid-pol small" style="left: 25.925925926%"></span><span class="irs-grid-pol" style="left: 33.333333333%"></span><span class="irs-grid-text js-grid-text-3" style="left: 33.3333%; visibility: hidden;">6</span><span class="irs-grid-pol small" style="left: 40.74074074%"></span><span class="irs-grid-pol small" style="left: 37.037037037%"></span><span class="irs-grid-pol" style="left: 44.444444444%"></span><span class="irs-grid-text js-grid-text-4" style="left: 44.444444444%">7</span><span class="irs-grid-pol small" style="left: 51.851851851%"></span><span class="irs-grid-pol small" style="left: 48.148148148%"></span><span class="irs-grid-pol" style="left: 55.555555555%"></span><span class="irs-grid-text js-grid-text-5" style="left: 55.5556%; visibility: hidden;">8</span><span class="irs-grid-pol small" style="left: 62.962962962%"></span><span class="irs-grid-pol small" style="left: 59.259259259%"></span><span class="irs-grid-pol" style="left: 66.666666666%"></span><span class="irs-grid-text js-grid-text-6" style="left: 66.6667%; visibility: hidden;">9</span><span class="irs-grid-pol small" style="left: 74.074074073%"></span><span class="irs-grid-pol small" style="left: 70.37037037%"></span><span class="irs-grid-pol" style="left: 77.777777777%"></span><span class="irs-grid-text js-grid-text-7" style="left: 77.7778%; visibility: hidden;">10</span><span class="irs-grid-pol small" style="left: 85.185185184%"></span><span class="irs-grid-pol small" style="left: 81.481481481%"></span><span class="irs-grid-pol" style="left: 88.888888888%"></span><span class="irs-grid-text js-grid-text-8" style="left: 88.888888888%">11</span><span class="irs-grid-pol small" style="left: 96.296296295%"></span><span class="irs-grid-pol small" style="left: 92.592592592%"></span><span class="irs-grid-pol" style="left: 99.999999999%"></span><span class="irs-grid-text js-grid-text-9" style="left: 100%; visibility: hidden;">12</span></span><span class="irs-bar"></span><span class="irs-bar-edge"></span><span class="irs-shadow shadow-single"></span><span class="irs-slider single"></span></span><input class="js-range-slider irs-hidden-input shiny-bound-input shinyjs-resettable" id="barno" data-min="3" data-max="12" data-from="5" data-step="1" data-grid="true" data-grid-num="9" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="11.1111111111111" data-drag-interval="true" data-data-type="number" readonly="" data-shinyjs-resettable-id="barno" data-shinyjs-resettable-type="Slider" data-shinyjs-resettable-value="5">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#">
+          <button id="submit1" type="button" class="btn btn-default action-button shiny-bound-input">
+            <i class="fa fa-submit"></i>
+            Submit
+          </button>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li class="treeview">
+    <a href="http://127.0.0.1:7746/#shiny-tab-v1" data-toggle="tab" data-value="v1">
+      <i class="fa fa-angle-double-right"></i>
+      <span>Benchmark Your Customer</span>
+      <i class="fa fa-angle-left pull-right"></i>
+    </a>
+    <ul class="treeview-menu">
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-v3" data-toggle="tab" data-value="v3">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="you1">Select your Customer </label>
+            <div>
+              <select id="you1" class="form-control selectized shiny-bound-input shinyjs-resettable" tabindex="-1" data-shinyjs-resettable-id="you1" data-shinyjs-resettable-type="Select" data-shinyjs-resettable-value="AdBlock" style="display: none;"><option value="AdBlock" selected="selected">AdBlock</option></select><div class="selectize-control form-control single"><div class="selectize-input items full has-options has-items"><div data-value="AdBlock" class="item">AdBlock</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single form-control" style="display: none; width: 100px; top: 0px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="you1">{}</script>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-v1" data-toggle="tab" data-value="v1">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="select1">Benchmark by</label>
+            <div>
+              <select id="select1" class="form-control selectized shiny-bound-input shinyjs-resettable" tabindex="-1" data-shinyjs-resettable-id="select1" data-shinyjs-resettable-type="Select" data-shinyjs-resettable-value="Everything" style="display: none;"><option value="Everything" selected="selected">Everything</option></select><div class="selectize-control form-control single"><div class="selectize-input items full has-options has-items"><div data-value="Everything" class="item">Everything</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single form-control" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="select1">{}</script>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-v2" data-toggle="tab" data-value="v2">
+          <div id="selectUI1" class="shiny-html-output shiny-bound-output"></div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#">
+          <button id="submit2" type="button" class="btn btn-default action-button shiny-bound-input">Submit</button>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li class="treeview">
+    <a href="http://127.0.0.1:7746/#shiny-tab-u1" data-toggle="tab" data-value="v1">
+      <i class="fa fa-angle-double-right"></i>
+      <span>Product usage</span>
+      <i class="fa fa-angle-left pull-right"></i>
+    </a>
+    <ul class="treeview-menu">
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-u1" data-toggle="tab" data-value="u1">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="select3">Filter by</label>
+            <div>
+              <select id="select3" class="form-control selectized shiny-bound-input shinyjs-resettable" tabindex="-1" data-shinyjs-resettable-id="select3" data-shinyjs-resettable-type="Select" data-shinyjs-resettable-value="Everything" style="display: none;"><option value="Everything" selected="selected">Everything</option></select><div class="selectize-control form-control single"><div class="selectize-input items full has-options has-items"><div data-value="Everything" class="item">Everything</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single form-control" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="select3">{}</script>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-u2" data-toggle="tab" data-value="u2">
+          <div id="selectUI3" class="shiny-html-output shiny-bound-output"></div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-u3" data-toggle="tab" data-value="u3">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="Groupby3">Select group by count of  </label>
+            <div>
+              <select id="Groupby3" class="form-control selectized shiny-bound-input shinyjs-resettable" tabindex="-1" data-shinyjs-resettable-id="Groupby3" data-shinyjs-resettable-type="Select" data-shinyjs-resettable-value="Integrations_count" style="display: none;"><option value="Integrations_count" selected="selected">Integrations_count</option></select><div class="selectize-control form-control single"><div class="selectize-input items full has-options has-items"><div data-value="Integrations_count" class="item">Integrations_count</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single form-control" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="Groupby3">{}</script>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#shiny-tab-u4" data-toggle="tab" data-value="u4">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="barno4">Number of bars</label>
+            <span class="irs js-irs-3 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min">3</span><span class="irs-max">15</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single">0</span></span><span class="irs-grid"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%">3</span><span class="irs-grid-pol small" style="left: 12.5%"></span><span class="irs-grid-pol small" style="left: 8.333333334%"></span><span class="irs-grid-pol small" style="left: 4.166666667%"></span><span class="irs-grid-pol" style="left: 16.666666667%"></span><span class="irs-grid-text js-grid-text-1" style="left: 16.6667%; visibility: hidden;">5</span><span class="irs-grid-pol small" style="left: 29.166666667%"></span><span class="irs-grid-pol small" style="left: 25.000000001%"></span><span class="irs-grid-pol small" style="left: 20.833333334%"></span><span class="irs-grid-pol" style="left: 33.333333334%"></span><span class="irs-grid-text js-grid-text-2" style="left: 33.3333%; visibility: hidden;">7</span><span class="irs-grid-pol small" style="left: 45.833333334%"></span><span class="irs-grid-pol small" style="left: 41.666666667%"></span><span class="irs-grid-pol small" style="left: 37.500000001%"></span><span class="irs-grid-pol" style="left: 50.000000001%"></span><span class="irs-grid-text js-grid-text-3" style="left: 50%; visibility: hidden;">9</span><span class="irs-grid-pol small" style="left: 62.500000001%"></span><span class="irs-grid-pol small" style="left: 58.333333335%"></span><span class="irs-grid-pol small" style="left: 54.166666668%"></span><span class="irs-grid-pol" style="left: 66.666666668%"></span><span class="irs-grid-text js-grid-text-4" style="left: 66.666666668%">11</span><span class="irs-grid-pol small" style="left: 79.166666668%"></span><span class="irs-grid-pol small" style="left: 75.000000002%"></span><span class="irs-grid-pol small" style="left: 70.833333335%"></span><span class="irs-grid-pol" style="left: 83.333333335%"></span><span class="irs-grid-text js-grid-text-5" style="left: 83.3333%; visibility: hidden;">13</span><span class="irs-grid-pol small" style="left: 91.666666668%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-6" style="left: 100%; visibility: hidden;">15</span></span><span class="irs-bar"></span><span class="irs-bar-edge"></span><span class="irs-shadow shadow-single"></span><span class="irs-slider single"></span></span><input class="js-range-slider irs-hidden-input shiny-bound-input shinyjs-resettable" id="barno4" data-min="3" data-max="15" data-from="5" data-step="1" data-grid="true" data-grid-num="6" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="8.33333333333333" data-drag-interval="true" data-data-type="number" readonly="" data-shinyjs-resettable-id="barno4" data-shinyjs-resettable-type="Slider" data-shinyjs-resettable-value="5">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:7746/#">
+          <button id="submit3" type="button" class="btn btn-default action-button shiny-bound-input">Submit</button>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+        </ul>
+      </section>
+    </aside>
+    <div class="content-wrapper" style="min-height: 521px;">
+      <section class="content">
+        <div class="container-fluid">
+          <div class="container-fluid" id="id1">
+            <div class="row">
+              <div data-display-if="$(&#39;html&#39;).hasClass(&#39;shiny-busy&#39;)" style="display: none;">
+                <img src="./index_files/loader.gif">
+              </div>
+            </div>
+            <div data-display-if="!($(&#39;html&#39;).hasClass(&#39;shiny-busy&#39;))" style="display: block;">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="shiny-tab-s1">
+                  <div class="row">
+                    <h2>Freshdesk - Customer Demographics and Revenue stats</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Accounts - Count</h3>
+                        </div>
+                        <div class="box-body">
+                          <div id="plot1" style="width: 100%; height: 400px; visibility: inherit;" class="plotly html-widget html-widget-output shiny-bound-output js-plotly-plot"><div class="plot-container plotly"><div class="svg-container" style="position: relative; width: 443px; height: 400px;"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443" height="400" style="background: rgb(255, 255, 255);"><defs id="defs-5e393a"><g class="clips"><clippath class="axesclip" id="clip5e393ax"><rect x="60" y="0" width="373" height="400"></rect></clippath><clippath class="axesclip" id="clip5e393ay"><rect x="0" y="25" width="443" height="275"></rect></clippath><clippath class="axesclip" id="clip5e393axy"><rect x="60" y="25" width="373" height="275"></rect></clippath><clippath class="plotclip" id="clip5e393axyplot"><rect width="373" height="275"></rect></clippath></g></defs><g class="draglayer"><g transform="translate(60,25)"><rect class="drag nsewdrag cursor-crosshair" data-subplot="xy" x="0" y="0" width="373" height="275" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag nwdrag cursor-nw-resize" data-subplot="xy" x="-20" y="-20" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag nedrag cursor-ne-resize" data-subplot="xy" x="373" y="-20" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag swdrag cursor-sw-resize" data-subplot="xy" x="-20" y="275" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag sedrag cursor-se-resize" data-subplot="xy" x="373" y="275" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag ewdrag cursor-ew-resize" data-subplot="xy" x="37.300000000000004" y="275.5" width="298.40000000000003" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag wdrag cursor-w-resize" data-subplot="xy" x="0" y="275.5" width="37.300000000000004" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag edrag cursor-e-resize" data-subplot="xy" x="335.7" y="275.5" width="37.300000000000004" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag nsdrag cursor-ns-resize" data-subplot="xy" x="-20.5" y="27.5" width="20" height="220" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag sdrag cursor-s-resize" data-subplot="xy" x="-20.5" y="247.5" width="20" height="27.5" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag ndrag cursor-n-resize" data-subplot="xy" x="-20.5" y="0" width="20" height="27.5" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect></g></g><g class="shapelayer shapelayer-below"></g><g class="subplot xy"><rect x="60" y="25" width="373" height="275" style="stroke-width: 0; fill: rgb(0, 0, 0); fill-opacity: 0;"></rect><g class="shapelayer shapelayer-subplot"></g><g transform="translate(60,25)"><path class="ygrid crisp" d="M0,0h373" transform="translate(0,236.35)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,197.71)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,159.06)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,120.41)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,81.77)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,43.12)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,4.47)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path></g><g></g><g transform="translate(60,25)"><path class="yzl zl crisp" d="M0,0h373" transform="translate(0,275)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path></g><g></g><g transform="translate(60, 25)" clip-path="url(#clip5e393axyplot)"><g class="imagelayer"></g><g class="maplayer"></g><g class="barlayer"><g class="trace bars" style="opacity: 1;"><g class="points"><path d="M7.46,275V13.75H67.14V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M82.06,275V112.49H141.74V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M156.66,275V193.38H216.34V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M231.26,275V261.36H290.94V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M305.86,275V264.49H365.54V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path></g></g></g><g class="boxlayer"></g><g class="scatterlayer"></g></g><g></g><path class="crisp" transform="translate(60,25)" d="M-1,275.5h375" style="fill: none; stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0;"></path><path class="crisp" transform="translate(60,25)" d="M-0.5,-1v276" stroke-width="1px" style="fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 0;"></path><g></g><g transform="translate(60,25)"><g class="xtick" data-bb="16"><text text-anchor="middle" x="0" y="289" transform="translate(37.3,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="10"><tspan class="line" dy="0em" x="0" y="289">THE</tspan><tspan class="line" dy="1.3em" x="0" y="289">AMERICAS</tspan></text></g><g class="xtick" data-bb="17"><text text-anchor="middle" x="0" y="289" transform="translate(111.9,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="11">EUROPE</text></g><g class="xtick" data-bb="18"><text text-anchor="middle" x="0" y="289" transform="translate(186.5,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="12">ASIA</text></g><g class="xtick" data-bb="19"><text text-anchor="middle" x="0" y="289" transform="translate(261.1,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="13">others</text></g><g class="xtick" data-bb="20"><text text-anchor="middle" x="0" y="289" transform="translate(335.7,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="14">AFRICA</text></g></g><g transform="translate(60,25)"><g class="ytick" data-bb="22"><text text-anchor="end" x="-2" y="6" transform="translate(0,275)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">0</text></g><g class="ytick" data-bb="23"><text text-anchor="end" x="-2" y="6" transform="translate(0,236.35)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">1000</text></g><g class="ytick" data-bb="24"><text text-anchor="end" x="-2" y="6" transform="translate(0,197.71)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">2000</text></g><g class="ytick" data-bb="25"><text text-anchor="end" x="-2" y="6" transform="translate(0,159.06)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">3000</text></g><g class="ytick" data-bb="26"><text text-anchor="end" x="-2" y="6" transform="translate(0,120.41)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">4000</text></g><g class="ytick" data-bb="27"><text text-anchor="end" x="-2" y="6" transform="translate(0,81.77)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">5000</text></g><g class="ytick" data-bb="28"><text text-anchor="end" x="-2" y="6" transform="translate(0,43.12)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">6000</text></g><g class="ytick" data-bb="29"><text text-anchor="end" x="-2" y="6" transform="translate(0,4.47)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">7000</text></g></g><g></g></g><g class="ternarylayer"></g><g class="shapelayer shapelayer-above"></g><g class="pielayer"></g><g class="glimages"></g><g class="geoimages"></g><text class="js-plot-link-container" style="font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); pointer-events: all;" y="391" text-anchor="end" x="436"><tspan class="js-link-to-tool"></tspan><tspan class="js-link-spacer"></tspan><tspan class="js-sourcelinks"></tspan></text></svg><div class="gl-container"></div><div class="geo-container"></div><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443" height="400"><defs id="topdefs-5e393a"></defs><g class="infolayer"><g class="g-gtitle"><text class="gtitle" data-unformatted="Count of Customers by  Region" x="221.5" y="12.5" text-anchor="middle" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 17px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre; visibility: visible;">Count of Customers by  Region</text></g><g class="g-xtitle" data-bb="15"><text class="xtitle" data-unformatted="Region" x="246.5" y="352" text-anchor="middle" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 14px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre; visibility: visible;">Region</text></g><g class="g-ytitle" data-bb="21"><text class="ytitle" data-unformatted="Count" transform="rotate(-90,22,162.5) translate(0, 0)" x="22" y="162.5" text-anchor="middle" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 14px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre; visibility: visible;">Count</text></g></g><g class="zoomlayer"></g><g class="hoverlayer"></g></svg></div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Revenue</h3>
+                        </div>
+                        <div class="box-body">
+                          <div id="plot2" style="width: 100%; height: 400px; visibility: inherit;" class="plotly html-widget html-widget-output shiny-bound-output js-plotly-plot"><div class="plot-container plotly"><div class="svg-container" style="position: relative; width: 443px; height: 400px;"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443" height="400" style="background: rgb(255, 255, 255);"><defs id="defs-65e95d"><g class="clips"><clippath class="axesclip" id="clip65e95dx"><rect x="60" y="0" width="373" height="400"></rect></clippath><clippath class="axesclip" id="clip65e95dy"><rect x="0" y="25" width="443" height="275"></rect></clippath><clippath class="axesclip" id="clip65e95dxy"><rect x="60" y="25" width="373" height="275"></rect></clippath><clippath class="plotclip" id="clip65e95dxyplot"><rect width="373" height="275"></rect></clippath></g></defs><g class="draglayer"><g transform="translate(60,25)"><rect class="drag nsewdrag cursor-crosshair" data-subplot="xy" x="0" y="0" width="373" height="275" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag nwdrag cursor-nw-resize" data-subplot="xy" x="-20" y="-20" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag nedrag cursor-ne-resize" data-subplot="xy" x="373" y="-20" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag swdrag cursor-sw-resize" data-subplot="xy" x="-20" y="275" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag sedrag cursor-se-resize" data-subplot="xy" x="373" y="275" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag ewdrag cursor-ew-resize" data-subplot="xy" x="37.300000000000004" y="275.5" width="298.40000000000003" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag wdrag cursor-w-resize" data-subplot="xy" x="0" y="275.5" width="37.300000000000004" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag edrag cursor-e-resize" data-subplot="xy" x="335.7" y="275.5" width="37.300000000000004" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag nsdrag cursor-ns-resize" data-subplot="xy" x="-20.5" y="27.5" width="20" height="220" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag sdrag cursor-s-resize" data-subplot="xy" x="-20.5" y="247.5" width="20" height="27.5" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="drag ndrag cursor-n-resize" data-subplot="xy" x="-20.5" y="0" width="20" height="27.5" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect></g></g><g class="shapelayer shapelayer-below"></g><g class="subplot xy"><rect x="60" y="25" width="373" height="275" style="stroke-width: 0; fill: rgb(0, 0, 0); fill-opacity: 0;"></rect><g class="shapelayer shapelayer-subplot"></g><g transform="translate(60,25)"><path class="ygrid crisp" d="M0,0h373" transform="translate(0,216.93)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,158.87)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,100.8)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" d="M0,0h373" transform="translate(0,42.73)" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path></g><g></g><g transform="translate(60,25)"><path class="yzl zl crisp" d="M0,0h373" transform="translate(0,275)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path></g><g></g><g transform="translate(60, 25)" clip-path="url(#clip65e95dxyplot)"><g class="imagelayer"></g><g class="maplayer"></g><g class="barlayer"><g class="trace bars" style="opacity: 1;"><g class="points"><path d="M7.46,275V13.75H67.14V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M82.06,275V112.81H141.74V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M156.66,275V167.48H216.34V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M231.26,275V256.1H290.94V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path><path d="M305.86,275V261.34H365.54V275Z" style="fill: rgb(31, 119, 180); fill-opacity: 1;"></path></g></g></g><g class="boxlayer"></g><g class="scatterlayer"></g></g><g></g><path class="crisp" transform="translate(60,25)" d="M-1,275.5h375" style="fill: none; stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0;"></path><path class="crisp" transform="translate(60,25)" d="M-0.5,-1v276" stroke-width="1px" style="fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 0;"></path><g></g><g transform="translate(60,25)"><g class="xtick" data-bb="46"><text text-anchor="middle" x="0" y="289" transform="translate(37.3,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="40"><tspan class="line" dy="0em" x="0" y="289">THE</tspan><tspan class="line" dy="1.3em" x="0" y="289">AMERICAS</tspan></text></g><g class="xtick" data-bb="47"><text text-anchor="middle" x="0" y="289" transform="translate(111.9,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="41">EUROPE</text></g><g class="xtick" data-bb="48"><text text-anchor="middle" x="0" y="289" transform="translate(186.5,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="42">ASIA</text></g><g class="xtick" data-bb="49"><text text-anchor="middle" x="0" y="289" transform="translate(261.1,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="43"><tspan class="line" dy="0em" x="0" y="289">MIDDLE</tspan><tspan class="line" dy="1.3em" x="0" y="289">EAST</tspan></text></g><g class="xtick" data-bb="50"><text text-anchor="middle" x="0" y="289" transform="translate(335.7,0)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;" data-bb="44">others</text></g></g><g transform="translate(60,25)"><g class="ytick" data-bb="52"><text text-anchor="end" x="-2" y="6" transform="translate(0,275)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">0</text></g><g class="ytick" data-bb="53"><text text-anchor="end" x="-2" y="6" transform="translate(0,216.93)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">5M</text></g><g class="ytick" data-bb="54"><text text-anchor="end" x="-2" y="6" transform="translate(0,158.87)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">10M</text></g><g class="ytick" data-bb="55"><text text-anchor="end" x="-2" y="6" transform="translate(0,100.8)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">15M</text></g><g class="ytick" data-bb="56"><text text-anchor="end" x="-2" y="6" transform="translate(0,42.73)" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; visibility: visible; white-space: pre;">20M</text></g></g><g></g></g><g class="ternarylayer"></g><g class="shapelayer shapelayer-above"></g><g class="pielayer"></g><g class="glimages"></g><g class="geoimages"></g><text class="js-plot-link-container" style="font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); pointer-events: all;" y="391" text-anchor="end" x="436"><tspan class="js-link-to-tool"></tspan><tspan class="js-link-spacer"></tspan><tspan class="js-sourcelinks"></tspan></text></svg><div class="gl-container"></div><div class="geo-container"></div><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443" height="400"><defs id="topdefs-65e95d"></defs><g class="infolayer"><g class="g-gtitle"><text class="gtitle" data-unformatted="Sum of CMRR by Region" x="221.5" y="12.5" text-anchor="middle" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 17px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre; visibility: visible;">Sum of CMRR by Region</text></g><g class="g-xtitle" data-bb="45"><text class="xtitle" data-unformatted="Region" x="246.5" y="352" text-anchor="middle" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 14px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre; visibility: visible;">Region</text></g><g class="g-ytitle" data-bb="51"><text class="ytitle" data-unformatted="Count" transform="rotate(-90,22,162.5) translate(0, 0)" x="22" y="162.5" text-anchor="middle" style="font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 14px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre; visibility: visible;">Count</text></g></g><g class="zoomlayer"></g><g class="hoverlayer"></g></svg></div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="shiny-tab-v1">
+                  <div class="row">
+                    <h2>Benchmark Freshdesk customers</h2>
+                    <div id="t1" style="width:100%; height:auto; " class="datatables html-widget html-widget-output shiny-bound-output"></div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="shiny-tab-u1">
+                  <div class="row">
+                    <h2>Product - Feature Usage/Config stats</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Accounts - Count</h3>
+                        </div>
+                        <div class="box-body">
+                          <div id="plot5" style="width:100%; height:400px; " class="plotly html-widget html-widget-output shiny-bound-output"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">By Revenue</h3>
+                        </div>
+                        <div class="box-body">
+                          <div id="plot6" style="width:100%; height:400px; " class="plotly html-widget html-widget-output shiny-bound-output"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+<svg id="js-plotly-tester" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; left: -10000px; top: -10000px; width: 9000px; height: 9000px;"><path class="js-reference-point" d="M0,0H1V1H0Z" style="stroke-width: 0; fill: black;"></path></svg></body></html>

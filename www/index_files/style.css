@@ -1,0 +1,12 @@
+h2{margin: 10px 0 20px 20px; font-size: 18px; color: #1A436D; font-weight: 600;}
+.sidebar-menu .treeview-menu>li>a{padding-left:0;}
+.sidebar-menu .treeview-menu>li:last-child>a{text-align:right;margin-right: 15px;}
+.sidebar .shiny-input-container{margin-bottom:0;}
+.selectize-control{margin-bottom:0;}
+.selectize-dropdown-content{font-size:13px;}
+.checkbox label, .radio label{font-size:13px;}
+.bg-teal{background-color:#48CFAD !important}
+.action-button{margin: 10px 0 20px 10px;}
+.main-sidebar{transition: all 0.5s ease;}
+.main-header .logo img{width:70%;}
+.main-header .logo{padding-left:0;}
